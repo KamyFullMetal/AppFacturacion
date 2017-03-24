@@ -22,4 +22,8 @@ public class Cliente {
 		this.tarifa = tarifa;
 	}
 	
+	public Date getFecha(){
+		return fechaAlta;
+	}
+	
 }
