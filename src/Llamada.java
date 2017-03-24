@@ -11,6 +11,10 @@ public class Llamada {
 	
 	// Constructor
 	
+	public Llamada(int nIF2) {
+		this.NIF=nIF2;
+	}
+
 	public void llamada(int tlfnDestino, Date fechaHora, int duracion, int nif){
 		
 		this.tlfnDestino = tlfnDestino;
@@ -20,6 +24,38 @@ public class Llamada {
 		
 	}
 	
+	public int getTlfnDestino() {
+		return tlfnDestino;
+	}
+
+	public void setTlfnDestino(int tlfnDestino) {
+		this.tlfnDestino = tlfnDestino;
+	}
+
+	public Date getFechaHora() {
+		return fechaHora;
+	}
+
+	public void setFechaHora(Date fechaHora) {
+		this.fechaHora = fechaHora;
+	}
+
+	public int getDuracion() {
+		return duracion;
+	}
+
+	public void setDuracion(int duracion) {
+		this.duracion = duracion;
+	}
+
+	public int getNIF() {
+		return NIF;
+	}
+
+	public void setNIF(int nIF) {
+		NIF = nIF;
+	}
+
 	public Date getFecha(){
 		return fechaHora;
 	}

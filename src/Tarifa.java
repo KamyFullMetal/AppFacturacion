@@ -7,4 +7,8 @@ public class Tarifa {
 		this.precio=precio;
 	}
 
+	public float getPrecio() {
+		return precio;
+	}
+
 }

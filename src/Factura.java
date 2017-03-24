@@ -9,7 +9,7 @@ public class Factura {
 	private Date fechaEmision;
 	private Date[] periodoFactura;
 	private int NIF;
-	private float importe = getImporte(duracion, tarifa);
+	private float importe = getImporte(NIF, periodoFactura, tarifa);
 	
 	// Constructor
 	
@@ -22,11 +22,14 @@ public class Factura {
 		this.NIF = NIF;
 	}
 
-	private float getImporte(int dura, float tari) {
+	private float getImporte(int NIF, Date[] periodoFactura, Tarifa tari) {
 		//Sumatorio de todos los minutos del cliente por la tarifa aplicada
-		int duracion = dura;
-		float tarifa = tari;
-		float impo= duracion*tarifa;
+		//coger las llamadas del Cliente con NIF dentro de esas fechas
+		
+		int sumaDuracion = 0;
+		
+		float tarifa = tari.getPrecio();
+		float impo= sumaDuracion*tarifa;
 		return impo;
 	}
 	
