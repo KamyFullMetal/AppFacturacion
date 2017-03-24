@@ -1,6 +1,7 @@
 import java.util.Date;
 
 public class Cliente {
+	
 	/*Atributos*/
 	String nombre;
 	String NIF;
