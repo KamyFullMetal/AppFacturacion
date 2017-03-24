@@ -36,7 +36,7 @@ public class Llamada {
 		
 		System.out.println("Introduzca ahora la fecha de la llamada: Ex: Monday 12 December 2013");
 	    String dateString = sc.next();
-	    DateFormat formatter = new SimpleDateFormat("EEEE dd MMM yyyy");
+	    DateFormat formatter = new SimpleDateFormat("EEEE dd MMM yyyy");		// Ejemplo: Monday 21 April 2016
 	    Date date = formatter.parse(dateString);
 	    
 	    System.out.println("Introduzca la duracion de la llamada en minutos:");
