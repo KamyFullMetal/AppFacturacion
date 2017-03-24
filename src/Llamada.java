@@ -10,10 +10,6 @@ public class Llamada {
 	private int NIF;
 	
 	// Constructor
-	
-	public Llamada(int nIF2) {
-		this.NIF=nIF2;
-	}
 
 	public void llamada(int tlfnDestino, Date fechaHora, int duracion, int nif){
 		

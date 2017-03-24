@@ -22,7 +22,7 @@ public class Factura {
 		this.NIF = NIF;
 	}
 
-	private float getImporte(int NIF, Date[] periodoFactura, Tarifa tari) {
+	private float getImporte(int NIF, Date[] periodoFactura, Tarifa tari) {		// COMPLETAR
 		//Sumatorio de todos los minutos del cliente por la tarifa aplicada
 		//coger las llamadas del Cliente con NIF dentro de esas fechas
 		
