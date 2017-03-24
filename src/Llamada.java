@@ -48,12 +48,30 @@ public class Llamada {
 		sc.close();
 		
 		//Crear la nueva llamada
-		Llamada e = new Llamada ();
+		Llamada e = new Llamada();
 		e.setTlfnDestino(llamada);
 		e.setFechaHora(date);
 		e.setDuracion(duracion);
 		e.setNIF(NIF);
 		listaLlamada.add(e);
+	}	
+	
+	public void listarLlamadas(){
+		System.out.println("Lista de todas las llamadas:\n************************************************");
+		System.out.println("NIF\tFecha\tDuracion\tTelefono Destinatario");
+		for(Llamada e : listaLlamada){
+			System.out.println(e.getNIF()+" "+e.getFecha()+" "+e.getDuracion()+" "+e.getTlfnDestino());
+		}
+	}
+	
+	public void listarLlamadasNIF(int NIF){
+		System.out.println("Lista de todas las llamadas de "+ NIF +":\n************************************************");
+		System.out.println("NIF\tFecha\tDuracion\tTelefono Destinatario");
+		for(Llamada e : listaLlamada){
+			if(e.getNIF() == NIF){
+				System.out.println(e.getNIF()+" "+e.getFecha()+" "+e.getDuracion()+" "+e.getTlfnDestino());
+			}
+		}
 	}
 	
 	public int getTlfnDestino() {
