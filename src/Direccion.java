@@ -5,7 +5,7 @@ public class Direccion {
 	private String provincia;
 	private String poblacion;
 	
-	public void direccion(int CP, String provincia, String poblacion){
+	public Direccion(int CP, String provincia, String poblacion){
 		this.CP=CP;
 		this.provincia=provincia;
 		this.poblacion=poblacion;
