@@ -16,7 +16,7 @@ public class Llamada {
 	private ArrayList<Llamada> listaLlamada = new ArrayList<Llamada>();
 	// Constructor
 
-	public void llamada(int tlfnDestino, Date fechaHora, int duracion, int nif){
+	public Llamada(int tlfnDestino, Date fechaHora, int duracion, int nif){
 		
 		this.tlfnDestino = tlfnDestino;
 		this.fechaHora = fechaHora;
@@ -48,11 +48,7 @@ public class Llamada {
 		sc.close();
 		
 		//Crear la nueva llamada
-		Llamada e = new Llamada();
-		e.setTlfnDestino(llamada);
-		e.setFechaHora(date);
-		e.setDuracion(duracion);
-		e.setNIF(NIF);
+		Llamada e = new Llamada(llamada, date, duracion, NIF);
 		listaLlamada.add(e);
 	}	
 	
