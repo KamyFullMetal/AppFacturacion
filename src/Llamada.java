@@ -70,6 +70,8 @@ public class Llamada {
 		}
 	}
 	
+	
+	
 	public int getTlfnDestino() {
 		return tlfnDestino;
 	}

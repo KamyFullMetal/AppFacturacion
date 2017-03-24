@@ -29,7 +29,7 @@ public class Factura {
 	}
 
 	// Metodos
-	
+
 	private float getImporte(int NIF, Date[] periodoFactura, Tarifa tari) {		// COMPLETAR
 		//Sumatorio de todos los minutos del cliente por la tarifa aplicada
 		//coger las llamadas del Cliente con NIF dentro de esas fechas
@@ -81,9 +81,84 @@ public class Factura {
 	    listaFactura.add(e);
 	}
 	
+	public void listarFacturasCodigo(int codigo){
+		System.out.println("Lista de todas las llamadas con codigo "+ codigo +":\n************************************************");
+		System.out.println("NIF\tFechaEmision\tFecha\tTarifa\tImporte");
+		for(Factura i : listaFactura){
+			if(i.getCodigo() == codigo){
+				System.out.println(i.getNIF()+" "+i.getFechaEmision()+" "+i.getFecha()+" "+i.getTarifa()+" "+i.getImporte());
+			}
+		}
+	}
+	
+	public void listarFacturasNIF(int NIF){
+		System.out.println("Lista de todas las llamadas con NIF "+ NIF +":\n************************************************");
+		System.out.println("NIF\tFechaEmision\tFecha\tTarifa\tImporte\tCodigo");
+		for(Factura i : listaFactura){
+			if(i.getNIF() == NIF){
+				System.out.println(i.getNIF()+" "+i.getFechaEmision()+" "+i.getFecha()+" "+i.getTarifa()+" "+i.getImporte()+" "+i.getNIF());
+			}
+		}
+	}
 	
 	public Date getFecha(){
 		return fechaEmision;
+	}
+	
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public Tarifa getTarifa() {
+		return tarifa;
+	}
+
+	public void setTarifa(Tarifa tarifa) {
+		this.tarifa = tarifa;
+	}
+
+	public Date getFechaEmision() {
+		return fechaEmision;
+	}
+
+	public void setFechaEmision(Date fechaEmision) {
+		this.fechaEmision = fechaEmision;
+	}
+
+	public Date[] getPeriodoFactura() {
+		return periodoFactura;
+	}
+
+	public void setPeriodoFactura(Date[] periodoFactura) {
+		this.periodoFactura = periodoFactura;
+	}
+
+	public int getNIF() {
+		return NIF;
+	}
+
+	public void setNIF(int nIF) {
+		NIF = nIF;
+	}
+
+	public float getImporte() {
+		return importe;
+	}
+
+	public void setImporte(float importe) {
+		this.importe = importe;
+	}
+
+	public ArrayList<Factura> getListaFactura() {
+		return listaFactura;
+	}
+
+	public void setListaFactura(ArrayList<Factura> listaFactura) {
+		this.listaFactura = listaFactura;
 	}
 
 }
