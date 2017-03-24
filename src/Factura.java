@@ -12,7 +12,7 @@ public class Factura {
 	
 	// Constructor
 	
-	public void Factura(int cod, Tarifa tarifa, Date fechaEmision, Date[] periodoFactura, float importe){
+	public void factura(int cod, Tarifa tarifa, Date fechaEmision, Date[] periodoFactura, float importe){
 		
 		this.codigo = cod;
 		this.tarifa = tarifa;
